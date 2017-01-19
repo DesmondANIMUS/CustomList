@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:weightSum="100"
+    android:minHeight="25px">
+    <TextView
+        android:text="First Name"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:textColor="@android:color/holo_blue_light"
+        android:id="@+id/firstName" />
+    <TextView
+        android:text="Last Name"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:textColor="@android:color/holo_blue_light"
+        android:id="@+id/lasName" />
+    <TextView
+        android:text="Age"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:textColor="@android:color/holo_blue_light"
+        android:id="@+id/age" />
+    <TextView
+        android:text="Gender"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:textColor="@android:color/holo_blue_light"
+        android:id="@+id/gender" />
+</LinearLayout>
