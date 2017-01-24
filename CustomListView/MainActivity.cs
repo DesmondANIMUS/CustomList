@@ -1,6 +1,6 @@
-﻿using Android.App;
+﻿using Android.OS;
+using Android.App;
 using Android.Widget;
-using Android.OS;
 using System.Collections.Generic;
 
 namespace CustomListView
@@ -27,8 +27,27 @@ namespace CustomListView
 
             adapt = new CustomLaout1Adapter(this, list1);
 
-            dataList.Adapter = adapt;
+            dataList.Adapter = adapt;            
+
+            dataList.ItemClick += DataList_ItemClick;   // Subscribing to that event
+            dataList.ItemClick += DataList_ItemClick1;
+            //you can subscribe to multiple methods
+
+            //dataList.ItemClick -= DataList_ItemClick; // And this is how you unsubscribe to an event
+        }
+
+        private void DataList_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            Toast.MakeText(this, list1[e.Position].LastName, ToastLength.Short).Show();
+        }
+
+        private void DataList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            // Getting data from the list here, NOT the listview
+            if (list1[e.Position].FirstName.Equals("Aioi"))
+                Toast.MakeText(this, "Test Complete", ToastLength.Short).Show();
+            else
+                Toast.MakeText(this, list1[e.Position].FirstName, ToastLength.Short).Show();
         }
     }
 }
-
